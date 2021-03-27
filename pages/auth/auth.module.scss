@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+.main {
+  background-image: url("/images/blur-meduse.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.loginCard {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  min-width: 550px;
+  min-height: 550px;
+  background-color: #202020ad;
+  display: inline-block;
+  color: #fff;
+
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.title {
+  font-family: "Rancho", cursive;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffd100;
+}
+
+.button {
+  color: #000;
+  display: block;
+  padding: 10px 0;
+  background-color: #ffd100;
+  width: 100%;
+  border-radius: 6px;
+}
