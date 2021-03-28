@@ -8,17 +8,25 @@
 }
 .loginCard {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 10%;
+  transform: translateY(-50%);
 
-  min-width: 550px;
-  min-height: 550px;
+  width: 300px;
+
+  @media (min-width: "768px") {
+    width: 550px;
+    height: 550px;
+  }
+
   background-color: #202020ad;
-  display: inline-block;
   color: #fff;
 
   padding: 50px;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
@@ -40,4 +48,10 @@
   background-color: #ffd100;
   width: 100%;
   border-radius: 6px;
+}
+.link {
+  color: #ffee32;
+  &:hover {
+    color: #ffd100;
+  }
 }

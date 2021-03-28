@@ -1,21 +1,35 @@
 import styles from "./auth.module.scss";
 import FromGroup from "../../src/package/auth/form-group";
+import Link from "next/link";
 
 const LoginPage2 = () => (
   <main className={styles.main}>
-    <div className={styles.loginCard}>
-      <img src="/images/logo.svg" alt="logo" className={styles.logo}/>
-      <h1 className={styles.title}>Sign in to your account</h1>
-      
-      <FromGroup id="email" type="email">Email address</FromGroup>
-      <FromGroup id="password" type="password">Password</FromGroup>
-      
-      <div className="flex justify-between">
-        <p><input type="checkbox" name="" id=""/> Remember me</p>
-        <p><a href="#">Forgot your password</a></p>
+    <form className={styles.loginCard}>
+      <div className="card-header">
+        <img src="/images/logo.svg" alt="logo" className={styles.logo} />
+        <h1 className={`${styles.title} mb-6`}>Sign in to your account</h1>
       </div>
-      <button className={styles.button}>Sign in</button>
-    </div>
+      <div>
+        <FromGroup id="email" type="email">
+          Email address
+        </FromGroup>
+        <FromGroup id="password" type="password">
+          Password
+        </FromGroup>
+
+        <div className="md:flex md:justify-between mb-4">
+          <p>
+            <input type="checkbox" name="" id="" /> Remember me
+          </p>
+          <p className={styles.link}>
+            <Link href="/auth/forgot-password">Forgot your password</Link>
+          </p>
+        </div>
+      </div>
+      <div className="mb-5">
+        <button className={styles.button}>Sign in</button>
+      </div>
+    </form>
   </main>
 );
 
