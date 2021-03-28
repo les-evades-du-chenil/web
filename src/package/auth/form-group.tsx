@@ -4,6 +4,7 @@ export interface IFormGroupProps {
   children: any;
   id: string;
   type: string;
+  ref: object;
 }
 
 const FromGroup = (props: IFormGroupProps) => (

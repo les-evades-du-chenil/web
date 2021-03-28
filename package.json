@@ -17,12 +17,19 @@
     }
   ],
   "dependencies": {
+    "@apollo/client": "^3.3.13",
+    "graphql": "^15.5.0",
     "next": "latest",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-hook-form": "^6.15.5",
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-operations": "1.17.15",
+    "@graphql-codegen/typescript-react-apollo": "2.2.3",
     "@types/node": "^14.14.32",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.1",
@@ -35,6 +42,7 @@
     "dev": "next",
     "build": "next build",
     "build-rust": "rustc --target wasm32-unknown-unknown -O --crate-type=cdylib src/add.rs -o add.wasm",
-    "start": "next start"
+    "start": "next start",
+    "gen": "graphql-codegen --config codegen.yml"
   }
 }
