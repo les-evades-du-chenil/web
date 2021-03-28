@@ -1,6 +1,6 @@
 import styles from "./auth.module.scss";
 import FromGroup from "../../src/package/auth/form-group";
-import Link from "next/link";
+import LoginOption from "../../src/package/auth/login-option";
 
 const LoginPage2 = () => (
   <main className={styles.main}>
@@ -16,15 +16,7 @@ const LoginPage2 = () => (
         <FromGroup id="password" type="password">
           Password
         </FromGroup>
-
-        <div className="md:flex md:justify-between mb-4">
-          <p>
-            <input type="checkbox" name="" id="" /> Remember me
-          </p>
-          <p className={styles.link}>
-            <Link href="/auth/forgot-password">Forgot your password</Link>
-          </p>
-        </div>
+        <LoginOption />
       </div>
       <div className="mb-5">
         <button className={styles.button}>Sign in</button>

@@ -6,6 +6,7 @@
   width: 100%;
   height: 100vh;
 }
+
 .loginCard {
   position: absolute;
   top: 50%;
@@ -48,10 +49,4 @@
   background-color: #ffd100;
   width: 100%;
   border-radius: 6px;
-}
-.link {
-  color: #ffee32;
-  &:hover {
-    color: #ffd100;
-  }
 }
