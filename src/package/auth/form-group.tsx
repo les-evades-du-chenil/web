@@ -1,4 +1,4 @@
-import styles from './form-group.module.scss'
+import styles from "./form-group.module.scss";
 
 export interface IFormGroupProps {
   children: any;
@@ -8,7 +8,9 @@ export interface IFormGroupProps {
 
 const FromGroup = (props: IFormGroupProps) => (
   <div className={styles.formGroup}>
-    <label htmlFor={styles.label}>{ props.children }</label>
+    <label htmlFor={props.id} className={styles.label}>
+      {props.children}
+    </label>
     <input id={props.id} type={props.type} className={styles.input} />
   </div>
 );
