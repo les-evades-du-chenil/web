@@ -4,16 +4,22 @@ export interface IFormGroupProps {
   children: any;
   id: string;
   type: string;
-  ref: object;
+  inputRef: object;
+  register: Function;
 }
 
-const FromGroup = (props: IFormGroupProps) => (
+const FormGroup = (props: IFormGroupProps) => (
   <div className={styles.formGroup}>
     <label htmlFor={props.id} className={styles.label}>
       {props.children}
     </label>
-    <input id={props.id} type={props.type} className={styles.input} />
+    <input
+      ref={props.register(props.inputRef)}
+      id={props.id}
+      type={props.type}
+      className={styles.input}
+    />
   </div>
 );
 
-export default FromGroup;
+export default FormGroup;

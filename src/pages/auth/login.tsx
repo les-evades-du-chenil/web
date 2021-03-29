@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import styles from "./auth.module.scss";
-import FromGroup from "../../src/package/auth/form-group";
-import LoginOption from "../../src/package/auth/login-option";
-import { useLoginMutation } from "../../src/generated/graphql";
+import FormGroup from "../../package/auth/form-group";
+import LoginOption from "../../package/auth/login-option";
+import { useLoginMutation } from "../../generated/graphql";
 
 type Inputs = {
   email: string;
@@ -14,7 +14,9 @@ const Login = () => {
   const [login] = useLoginMutation();
   const onSubmit = async (data: any) => {
     console.log(data);
-    const response = await login(data);
+    const response = await login({
+      variables: { email: data.email, password: data.password },
+    });
     console.log(response);
     if (response.data?.login.errors) {
       console.error(response.data.login.errors);
@@ -29,16 +31,22 @@ const Login = () => {
           <h1 className={`${styles.title} mb-6`}>Sign in to your account</h1>
         </div>
         <div>
-          <FromGroup id="email" type="email" ref={register}>
+          <FormGroup
+            id="email"
+            type="email"
+            inputRef={{ name: "email", required: true }}
+            register={register}
+          >
             Email address
-          </FromGroup>
-          <FromGroup
+          </FormGroup>
+          <FormGroup
             id="password"
             type="password"
-            ref={register({ required: true })}
+            inputRef={{ name: "password", required: true }}
+            register={register}
           >
             Password
-          </FromGroup>
+          </FormGroup>
           <LoginOption />
         </div>
         <div className="mb-5">
