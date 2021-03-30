@@ -8,7 +8,7 @@ export interface IFormGroupProps {
   children: any;
   name: string;
   error?: boolean;
-  errorText?: string;
+  errortext?: string;
 }
 
 const buildFieldProps = (props: IFormGroupProps): FieldHookConfig<any> => {
@@ -30,7 +30,7 @@ const FormGroup = (props: IFormGroupProps) => {
     <div className={styles.formGroup}>
       <label htmlFor={props.id}>{props.children}</label>
       <Field {...field} {...fieldProps} />
-      {props.error && <div className="text-primary">{props.errorText}</div>}
+      {props.error && <div className="text-primary">{props.errortext}</div>}
     </div>
   );
 };

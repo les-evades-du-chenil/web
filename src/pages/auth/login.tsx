@@ -58,7 +58,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 error={Boolean(errors.email && touched.email)}
-                errorText={errors.email}
+                errortext={errors.email}
               >
                 Email address
               </FormGroup>
@@ -67,7 +67,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 error={Boolean(errors.password && touched.password)}
-                errorText={errors.password}
+                errortext={errors.password}
               >
                 Password
               </FormGroup>
