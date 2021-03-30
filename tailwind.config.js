@@ -8,6 +8,7 @@ module.exports = {
       white: "#FFFFFF",
       primaryLight: "#FFEE32",
       grey: "#6D6D6D",
+      waring: "#f25f4c",
     },
     fontFamily: {
       sans: ["inter", "serif"],

@@ -1,24 +1,23 @@
-.label {
-  display: block;
-  font-size: 14px;
-  line-height: 20px;
-  color: white;
-
-  margin-bottom: 4px;
-}
-.input {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid white;
-  border-radius: 6px;
-  width: 100%;
-  color: white;
-
-  font-size: 16px;
-  line-height: 24px;
-  padding: 8px 15px;
-}
-
 .formGroup {
   margin-bottom: 1rem;
+  label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+
+    margin-bottom: 4px;
+  }
+  input {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    width: 100%;
+    color: white;
+
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 15px;
+  }
 }

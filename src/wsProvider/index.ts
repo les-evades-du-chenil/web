@@ -3,7 +3,7 @@ import { WebSocketLink } from "@apollo/client/link/ws";
 import { getMainDefinition } from "@apollo/client/utilities";
 
 const httpLink = new HttpLink({
-  uri: process.env.REACT_APP_SERVER_URL as string,
+  uri: "http://localhost:8080/graphql",
   credentials: "include",
 });
 
