@@ -14,7 +14,7 @@ interface FormValues {
 
 const Login = () => {
   const router = useRouter();
-  const alertClass = "rounded-md bg-waring p-3 mb-2";
+  const alertClass = "rounded-md bg-warning p-3 mb-2";
   const [login] = useLoginMutation();
   const [serverError, setServerError] = useState<Error | null>(null);
   const onSubmit = async (values: FormValues, {}) => {
