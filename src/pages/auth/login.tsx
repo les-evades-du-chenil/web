@@ -1,4 +1,4 @@
-import styles from "./auth.module.scss";
+import styles from "../../package/auth/auth.module.scss";
 import FormGroup from "../../package/auth/form-group";
 import LoginOption from "../../package/auth/login-option";
 import { useLoginMutation } from "../../generated/graphql";
