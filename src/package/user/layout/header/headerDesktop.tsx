@@ -111,4 +111,4 @@ const HeaderDesktops = () => (
     </div>
   </div>
 );
-export default HeaderDesktops;
+export { HeaderDesktops };

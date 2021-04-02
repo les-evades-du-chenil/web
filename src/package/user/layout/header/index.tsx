@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderDesktops from "./headerDesktop";
-import HeaderUserMobile from "./headerMobile";
+import { HeaderDesktops } from "./headerDesktop";
+import { HeaderUserMobile } from "./headerMobile";
 
 const Header = () => (
   <div className="bg-dpblue pb-32">

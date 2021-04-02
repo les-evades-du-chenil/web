@@ -93,4 +93,4 @@ const HeaderUserMobile = () => (
   </div>
 );
 
-export default HeaderUserMobile;
+export { HeaderUserMobile };
