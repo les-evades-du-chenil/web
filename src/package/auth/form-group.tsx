@@ -1,6 +1,6 @@
 import { Field, FieldHookConfig, useField } from "formik";
 import React from "react";
-import styles from "./form-group.module.scss";
+import styles from "./form-group.module.css";
 
 export interface IFormGroupProps {
   id: string;
