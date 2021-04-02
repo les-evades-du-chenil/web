@@ -1,20 +1,17 @@
-# WebAssembly example
+# "Les évadés du chenil" Web app 
 
-This example shows how to import WebAssembly files (`.wasm`) and use them inside of a React component that is server rendered. So the WebAssembly code is executed on the server too. In the case of this example we're showing Rust compiled to WebAssembly.
+
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+This app is based on `Next.js` And also `React` with WASM and rust for it
+## This app use Apollo to deal with the backends
 
-```bash
-npx create-next-app --example with-webassembly with-webassembly-app
-# or
-yarn create next-app --example with-webassembly with-webassembly-app
-```
+the backend is the project at [server github](https://github.com/les-evades-du-chenil/chenil-server)
+### Rust and WASM
+This project uses Rust compiled to wasm, the wasm file is included in the example, but to compile your own Rust code you'll have to [install](https://www.rust-lang.org/learn/get-started) Rust.
 
-This example uses Rust compiled to wasm, the wasm file is included in the example, but to compile your own Rust code you'll have to [install](https://www.rust-lang.org/learn/get-started) Rust.
-
-To compile `src/add.rs` to `add.wasm` run:
+To compile `rust` file to `wasm` run:
 
 ```bash
 npm run build-rust
@@ -22,4 +19,14 @@ npm run build-rust
 yarn build-rust
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## CodeGen and GraphQL Type generation
+
+the script `npm run codegen` will build type in */src/generated* based on codegen.yml
+
+the other scripts are **next** basic :
+- build
+- start
+- dev
+
+## Stack
+![React Next WASM TailwindCSS GraphQL Apollo Typescript](./docs/logos.jpg)
