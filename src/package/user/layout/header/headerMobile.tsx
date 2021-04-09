@@ -18,7 +18,7 @@ const HeaderUserMobile = () => (
         href="#"
         className="text-light hover:bg-grey hover:text-white block px-3 py-2 rounded-md text-base font-medium"
       >
-        Projects
+        Breeding
       </a>
       <a
         href="#"

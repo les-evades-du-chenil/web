@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
+import { getAccessToken, setAccessToken } from "../../package/auth/accessToken";
 
 interface FormValues {
   email: string;
@@ -22,7 +23,8 @@ const Login = () => {
       const { data } = await login({
         variables: values,
       });
-      router.push("/about");
+      setAccessToken(data!.login.accessToken);
+      router.push("/user");
     } catch (error) {
       setServerError(error);
       console.error(error);

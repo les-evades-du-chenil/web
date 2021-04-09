@@ -3,7 +3,7 @@ import { apolloClient } from "../wsProvider";
 import { AppProps } from "next/app";
 import React, { useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import { setAccessToken } from "../package/auth/accessToken";
+import { getAccessToken, setAccessToken } from "../package/auth/accessToken";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }).then(async (res) => {
       const { accessToken } = await res.json();
       setAccessToken(accessToken);
+      console.log(getAccessToken());
     });
   }, []);
 

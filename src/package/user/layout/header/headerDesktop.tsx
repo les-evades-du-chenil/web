@@ -27,7 +27,7 @@ const HeaderDesktops = () => (
                 href="#"
                 className="text-light hover:bg-lightGrey hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
-                Projects
+                Breeding
               </a>
               <a
                 href="#"
